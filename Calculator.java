@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
-public class Calculator {
+public class Demo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in=new Scanner(System.in);
 		int ans = 0;
-		boolean f=true;
+		boolean f = true;
+		int flag = 1;
 		while(f) {
 			System.out.println("Enter a operator:");
 			char op = in.next().charAt(0);
@@ -15,17 +16,22 @@ public class Calculator {
 				int num1 = in.nextInt();
 				int num2 = in.nextInt();
 				switch(op) {
-				case('+')->ans=num1+num2;
-				case('-')->ans=num1-num2;
-				case('*')->ans=num1*num2;
-				case('/')->{
-					if(num2!=0) {
-					ans=num1/num2;}else{
-						System.out.println("Number cannot be divisible by zero");
-					}}
-				case('%')->ans=num1%num2;	
+				case('+') -> ans = num1 + num2;
+				case('-') -> ans = num1 - num2;
+				case('*') -> ans = num1 * num2;
+				case('/') ->{
+					if(num2 != 0) {
+					ans = num1 / num2;
+					}else {
+						System.out.println("Number cannot be divided by zero");
+						flag = 0;
+					}
+					}
+				case('%') -> ans = num1 % num2;	
 				}
-				System.out.print("Answer: " + ans + "\n");
+				if(flag == 1) {
+					System.out.print("Answer: " + ans + "\n");
+				}
 			} else if(op == 'x' || op == 'X') {
 				break;
 			}else {
@@ -35,3 +41,5 @@ public class Calculator {
 	}
 
 }
+
+//Simple Calculator Program
