@@ -18,7 +18,7 @@ public class OrderAgnosticBS {
 		int start = 0;
 		int end = nums.length-1;
 		boolean isAsc = true;
-		if(nums[start] > nums[end-1]) {
+		if(nums[start] > nums[end]) {
 			isAsc = false;
 		}
 		while(start <= end) {
