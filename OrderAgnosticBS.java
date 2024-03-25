@@ -16,7 +16,7 @@ public class OrderAgnosticBS {
 	//return -1 if the target element doesn't exists
 	static int search(int[] nums,int target) {
 		int start = 0;
-		int end = nums.length;
+		int end = nums.length-1;
 		boolean isAsc = true;
 		if(nums[start] > nums[end-1]) {
 			isAsc = false;
